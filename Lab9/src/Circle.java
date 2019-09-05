@@ -12,7 +12,6 @@ public class Circle {
         return result;
     }
 
-
     public Circle(int radius) {
         this.radius = radius;
     }
@@ -20,6 +19,11 @@ public class Circle {
     public Circle(String color, int radius) {
         this.color = color;
         this.radius = radius;
+    }
+
+    public int diameter(int radius){
+        int diameter = radius * radius;
+        return diameter;
     }
 
 }
