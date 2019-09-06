@@ -5,11 +5,11 @@ public class ShopClient {
     private int numberOfCustomer;
     private List<String> cartList;
 
-    public int getNumberOfCustomer() {
+    int getNumberOfCustomer() {
         return numberOfCustomer;
     }
 
-    public void setNumberOfCustomer(int numberOfCustomer) {
+    void setNumberOfCustomer(int numberOfCustomer) {
         this.numberOfCustomer = numberOfCustomer;
     }
 

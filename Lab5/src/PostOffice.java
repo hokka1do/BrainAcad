@@ -17,7 +17,7 @@ public class PostOffice {
         return officeNumber;
     }
 
-    public void setOfficeNumber(String officeNumber) {
+    void setOfficeNumber(String officeNumber) {
         this.officeNumber = officeNumber;
     }
 
@@ -25,7 +25,7 @@ public class PostOffice {
         packageList.add(a);
     }
 
-    public static int getPackageVolume(int height, int width, int length) {
+    static int getPackageVolume(int height, int width, int length) {
         int volume = height * width * length;
         System.out.println("Your volume for package is" + volume);
         return volume;

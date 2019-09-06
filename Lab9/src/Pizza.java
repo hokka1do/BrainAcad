@@ -4,7 +4,7 @@ public class Pizza {
     private int cost;
     private Circle basis;
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
@@ -12,7 +12,7 @@ public class Pizza {
         this.name = name;
     }
 
-    public String getComposition() {
+    String getComposition() {
         return composition;
     }
 
@@ -20,7 +20,7 @@ public class Pizza {
         this.composition = composition;
     }
 
-    public int getCost() {
+    int getCost() {
         return cost;
     }
 
@@ -28,7 +28,7 @@ public class Pizza {
         this.cost = cost;
     }
 
-    public Circle getBasis() {
+    Circle getBasis() {
         return basis;
     }
 
@@ -36,7 +36,7 @@ public class Pizza {
         this.basis = basis;
     }
 
-    public Pizza(String name, String composition, int cost, Circle basis) {
+    Pizza(String name, String composition, int cost, Circle basis) {
         this.name = name;
         this.composition = composition;
         this.cost = cost;
