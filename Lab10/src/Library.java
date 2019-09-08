@@ -22,7 +22,10 @@ public class Library {
     static Film[] getFilms() {
         return films;
     }
-
+    /**
+     * Library constructor with library name as a
+     * @param library_name;
+     */
     Library(String library_name) {
         LIBRARY_NAME = library_name;
         System.out.println("Библиотека " + LIBRARY_NAME + ", успешно создана");
