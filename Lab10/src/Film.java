@@ -49,8 +49,11 @@ public class Film {
 
     /**
      * Film constructor with all parameters
+     * @param name;
+     * @param duration;
+     * @param genre;
      */
-    public Film(String name, int duration, String genre) {
+    Film(String name, int duration, String genre) {
 
         this.name = name;
         this.duration = duration;
@@ -61,7 +64,7 @@ public class Film {
     /**
      * Method to set name for film
      *
-     * @param name
+     * @param name;
      */
     public void setName(String name) {
         this.name = name;
@@ -70,7 +73,7 @@ public class Film {
     /**
      * Method to set name for film
      *
-     * @param duration
+     * @param duration;
      */
     public void setDuration(int duration) {
         this.duration = duration;
@@ -79,7 +82,7 @@ public class Film {
     /**
      * Method to set name for film
      *
-     * @param genre
+     * @param genre;
      */
     public void setGenre(String genre) {
         this.genre = genre;

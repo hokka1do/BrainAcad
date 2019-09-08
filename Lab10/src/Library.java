@@ -1,10 +1,11 @@
 /**
- * Created by Brainacad2 on 04.09.2019.
+ * Pattern for library of the movies
  */
-public class Library
-{
-    private final String libraryName;
-    private Film[] films = new Film[5];
+public class Library {
+    /*Field with library name*/
+    private final String LIBRARY_NAME;
+    /*Initializing array with size 6 of free cells*/
+    private static Film[] films = new Film[5];
 
     {
         films[0] = new Film("Film3", 96, Film.GENRE_COMEDY);
@@ -12,31 +13,20 @@ public class Library
         System.out.println("Добавлены любимые фильмы");
     }
 
-    public Library(String libraryName, Film[] films)
-    {
-        this.libraryName = libraryName;
-        this.films = films;
-        System.out.println("Библиотека " + libraryName + ", успешно создана");
+    /*Getter which returning name of the library*/
+    public String getLIBRARY_NAME() {
+        return LIBRARY_NAME;
     }
 
-    public String getLibraryName()
-    {
-        return libraryName;
-    }
-
-    public Film[] getFilms()
-    {
+    /*Getter which returning array of the library*/
+    static Film[] getFilms() {
         return films;
     }
 
-    public int libraryIsEmpty()
-    {
-        for (int i = 0; i < films.length; i++)
-        {
-        if (libraryName.isEmpty()){
-            return i;
-        }
-        }
-        return -1;
+    Library(String library_name) {
+        LIBRARY_NAME = library_name;
+        System.out.println("Библиотека " + LIBRARY_NAME + ", успешно создана");
     }
+
+
 }
