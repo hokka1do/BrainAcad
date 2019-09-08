@@ -1,5 +1,7 @@
 import java.util.List;
 
+
+
 public class ShopClient {
     private static final int DISCOUNT = 10;
     private int numberOfCustomer;

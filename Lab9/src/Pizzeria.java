@@ -1,4 +1,9 @@
 public class Pizzeria {
+    /**
+     * Main class for organized pizzeria
+     * Creating few different type of pizzas and printing in console all types
+     * @param args
+     */
     public static void main(String[] args) {
 
         Pizza[] pizzas = new Pizza[]{
