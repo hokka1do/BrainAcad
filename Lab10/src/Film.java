@@ -21,7 +21,6 @@ public class Film {
 
     /**
      * Method to get name of the movie
-     *
      * @return name
      */
     public String getName() {
