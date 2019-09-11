@@ -46,7 +46,8 @@ public class Passport {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+
     public void changeOwner(String newOwnerName) {
-        this.ownerName=newOwnerName;
+        this.ownerName = newOwnerName;
     }
 }
