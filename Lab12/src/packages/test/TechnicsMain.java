@@ -9,7 +9,6 @@ public class TechnicsMain {
     public static void main(String[] args) {
         Passport passport = new Passport();
     passport.setWarrantyStartDate(new Date());
-    //Проверить работу статических методов.??
         PassportUtil.warrantyReplace(passport);
     }
 }
