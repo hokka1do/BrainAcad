@@ -40,6 +40,11 @@ public class WrapperTest {
         if (infinityValue.isNaN()) {
             System.out.println("Переменная " + infinityValue + " = NaN");
         }
-
+        Long long1 = Long.valueOf(120);
+        Long long2 = Long.valueOf(120);
+        System.out.println(long1 == long2);
+        Long long3 = Long.valueOf(1200);
+        Long long4 = Long.valueOf(1200);
+        System.out.println(long3 == long4);
     }
 }
