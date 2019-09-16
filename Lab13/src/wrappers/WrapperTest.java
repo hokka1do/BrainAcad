@@ -31,14 +31,14 @@ public class WrapperTest {
         long l1 = d1.longValue();
         float f5 = d1.floatValue();
         Double zero = 0.0;
-        Double nanValue = d1 / zero;
-        Double infinityValue = zero / zero;
+        Double nanValue = zero / zero;
+        Double infinityValue = d1 / zero;
         System.out.println(nanValue + " " + infinityValue);
-        if (nanValue.isInfinite()) {
-            System.out.println("Переменная " + "nanValue " + "= Infinity");
+        if (nanValue.isNaN()) {
+            System.out.println("Переменная nanValue = " + nanValue);
         }
-        if (infinityValue.isNaN()) {
-            System.out.println("Переменная " + infinityValue + " = NaN");
+        if (infinityValue.isInfinite()) {
+            System.out.println("Переменная infinityValue  = " + infinityValue);
         }
         Long long1 = Long.valueOf(120);
         Long long2 = Long.valueOf(120);
