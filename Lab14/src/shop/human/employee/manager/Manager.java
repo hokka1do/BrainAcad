@@ -1,7 +1,7 @@
-package Shop.Human.Employee.Manager;
+package shop.human.employee.manager;
 
-import Shop.Human.Customer.Customer;
-import Shop.Human.Employee.Employee;
+import shop.human.customer.Customer;
+import shop.human.employee.Employee;
 
 import java.util.Objects;
 
@@ -12,20 +12,20 @@ public class Manager extends Employee {
         super(name, phoneNumber);
     }
 
-    public static void consulting() {
-        System.out.println("Manager consulting customers...");
+    public  void consulting() {
+        System.out.println("manager consulting customers...");
     }
 
-    public static void sayAboutDiscounts() {
-        System.out.println("Manager telling about shop discounts...");
+    public  void sayAboutDiscounts() {
+        System.out.println("manager telling about shop discounts...");
     }
 
-    public static void giveAnAdvice() {
-        System.out.println("Manager giving advice...");
+    public void giveAnAdvice() {
+        System.out.println("manager giving advice...");
     }
 
-    public static void doWork() {
-        System.out.println("Manager starts working...");
+    public void doWork() {
+        System.out.println("manager starts working...");
         consulting();
         sayAboutDiscounts();
         giveAnAdvice();
@@ -47,7 +47,7 @@ public class Manager extends Employee {
 
     @Override
     public String toString() {
-        return "Manager{" +
+        return "manager{" +
                 "theDepartment='" + theDepartment + '\'' +
                 '}';
     }

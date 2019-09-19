@@ -1,6 +1,6 @@
-package Shop.Human.Employee.Cashier;
+package shop.human.employee.cashier;
 
-import Shop.Human.Employee.Employee;
+import shop.human.employee.Employee;
 
 import java.util.Objects;
 
@@ -11,12 +11,12 @@ public class Cashier extends Employee {
         super(name, phoneNumber);
     }
 
-    private static void countMoney(int money) {
-        System.out.println("Cashier counted money and total value of money is - " + money);
+    private void countMoney(int money) {
+        System.out.println("cashier counted money and total value of money is - " + money);
     }
 
-    public static void doWork() {
-        System.out.println("Cashier starts working...");
+    public void doWork() {
+        System.out.println("cashier starts working...");
         countMoney(18500);
     }
 
@@ -24,18 +24,19 @@ public class Cashier extends Employee {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Cashier cashier = (Cashier) o;
         return numberOfCashDesk == cashier.numberOfCashDesk;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numberOfCashDesk);
+        return Objects.hash(super.hashCode(), numberOfCashDesk);
     }
 
     @Override
     public String toString() {
-        return "Cashier{" +
+        return "cashier{" +
                 "numberOfCashDesk=" + numberOfCashDesk +
                 '}';
     }

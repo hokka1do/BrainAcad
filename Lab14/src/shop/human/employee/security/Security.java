@@ -1,18 +1,18 @@
-package Shop.Human.Employee.Security;
+package shop.human.employee.security;
 
-import Shop.Human.Employee.Employee;
+import shop.human.employee.Employee;
 
 public class Security extends Employee {
     public Security(String name, String phoneNumber) {
         super(name, phoneNumber);
     }
 
-    static void talkOnRadio() {
-        System.out.println("Security talking on radio");
+    void talkOnRadio() {
+        System.out.println("security talking on radio");
     }
 
-        public static void doWork() {
-        System.out.println("Security start doing his job...");
+    public void doWork() {
+        System.out.println("security start doing his job...");
         talkOnRadio();
     }
 

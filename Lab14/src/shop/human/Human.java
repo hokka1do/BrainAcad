@@ -1,4 +1,4 @@
-package Shop.Human;
+package shop.human;
 
 import java.util.Date;
 import java.util.Objects;
@@ -14,11 +14,11 @@ public class Human {
     }
 
     void sayHello() {
-        System.out.println("Human says Hello!");
+        System.out.println("human says Hello!");
     }
 
     void sayBye() {
-        System.out.println("Human says Good bye!");
+        System.out.println("human says Good bye!");
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Shop.Human{" +
+        return "shop.human{" +
                 "name='" + name + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", phoneNumber='" + phoneNumber + '\'' +

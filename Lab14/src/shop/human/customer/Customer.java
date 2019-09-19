@@ -1,9 +1,9 @@
-package Shop.Human.Customer;
+package shop.human.customer;
 
-import Shop.Human.Employee.Cashier.Cashier;
-import Shop.Human.Employee.Manager.Manager;
-import Shop.Human.Employee.Security.Security;
-import Shop.Human.Human;
+import shop.human.employee.cashier.Cashier;
+import shop.human.employee.manager.Manager;
+import shop.human.employee.security.Security;
+import shop.human.Human;
 
 import java.util.Objects;
 
@@ -15,13 +15,13 @@ public class Customer extends Human {
         super(name, phoneNumber);
     }
 
-    public static void askAboutProduct() {
-        System.out.println("Customer asking about product...");
+    public void askAboutProduct() {
+        System.out.println("customer asking about product...");
         Manager.doWork();
     }
 
-    public static void buy() {
-        System.out.println("Customer buying product...");
+    public void buy() {
+        System.out.println("customer buying product...");
         Cashier.doWork();
         Security.doWork();
     }
@@ -42,7 +42,7 @@ public class Customer extends Human {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "customer{" +
                 "discount=" + discount +
                 ", balanceOfMoney=" + balanceOfMoney +
                 '}';

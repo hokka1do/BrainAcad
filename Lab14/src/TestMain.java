@@ -1,9 +1,12 @@
-import Shop.Human.Customer.Customer;
-import Shop.Shop;
+import shop.human.customer.Customer;
+import shop.Shop;
+import shop.human.employee.Employee;
 
 public class TestMain {
     public static void main(String[] args) {
         Shop newShop = new Shop();
+        Customer customer = new Customer("Illia Kuznetsov","38097");
+        Employee employee = new Employee("Ali","380");
         //1)
         System.out.println("Case no1 ---->");
         newShop.open();
