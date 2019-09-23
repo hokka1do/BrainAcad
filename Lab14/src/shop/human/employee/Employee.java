@@ -3,7 +3,6 @@ package shop.human.employee;
 import shop.human.Human;
 
 import java.util.Date;
-import java.util.Objects;
 
 public class Employee extends Human {
     private Date hiringDate;

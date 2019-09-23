@@ -2,6 +2,8 @@ package shop.human.employee.manager;
 
 import shop.human.customer.Customer;
 import shop.human.employee.Employee;
+import shop.human.employee.cashier.Cashier;
+import shop.human.employee.security.Security;
 
 import java.util.Objects;
 
@@ -12,11 +14,11 @@ public class Manager extends Employee {
         super(name, phoneNumber);
     }
 
-    public  void consulting() {
+    public void consulting() {
         System.out.println("manager consulting customers...");
     }
 
-    public  void sayAboutDiscounts() {
+    public void sayAboutDiscounts() {
         System.out.println("manager telling about shop discounts...");
     }
 
@@ -24,12 +26,22 @@ public class Manager extends Employee {
         System.out.println("manager giving advice...");
     }
 
-    public void doWork() {
+    public void work(Customer customer) {
         System.out.println("manager starts working...");
         consulting();
         sayAboutDiscounts();
         giveAnAdvice();
-        Customer.buy();
+        Cashier cashier = new Cashier("Vas", "165");
+        Security security =new Security("Dima","1313");
+        customer.buy(cashier, security);
+    }
+
+    public String getTheDepartment() {
+        return theDepartment;
+    }
+
+    public void setTheDepartment(String theDepartment) {
+        this.theDepartment = theDepartment;
     }
 
     @Override

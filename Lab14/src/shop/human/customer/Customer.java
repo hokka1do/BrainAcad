@@ -15,15 +15,15 @@ public class Customer extends Human {
         super(name, phoneNumber);
     }
 
-    public void askAboutProduct() {
+    public void askAboutProduct(Manager manager, Customer customer) {
         System.out.println("customer asking about product...");
-        Manager.doWork();
+        manager.work(customer);
     }
 
-    public void buy() {
+    public void buy(Cashier cashier, Security security) {
         System.out.println("customer buying product...");
-        Cashier.doWork();
-        Security.doWork();
+        cashier.doWork();
+        security.doWork();
     }
 
     @Override
