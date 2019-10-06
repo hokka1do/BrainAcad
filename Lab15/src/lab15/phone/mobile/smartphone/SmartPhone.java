@@ -14,4 +14,5 @@ public class SmartPhone extends Mobile {
     void runApp() {
         System.out.println("Smartphone is starting app");
     }
+
 }

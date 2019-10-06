@@ -2,12 +2,13 @@ package lab15.phone.dialPhone;
 
 import lab15.phone.Phone;
 
-public class DialPhone  extends Phone {
+public class DialPhone extends Phone {
     String hasAnswerPhone;
 
     public DialPhone(String hasAnswerPhone) {
         this.hasAnswerPhone = hasAnswerPhone;
         call();
+        autoAnswer();
         powerOff();
     }
 
@@ -26,7 +27,7 @@ public class DialPhone  extends Phone {
         System.out.println("Dial phone is OFF");
     }
 
-    void autoAnswer(){
+    void autoAnswer() {
         System.out.println("Dial phone is auto answering...");
     }
 }
