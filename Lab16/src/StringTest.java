@@ -48,5 +48,9 @@ public class StringTest {
                 + newTrimmedString + newString + inputString);
         stringBuilder1.reverse();
         System.out.println(stringBuilder1.toString());
+        int order = 66;
+        double progress = 97.209;
+        String formattedStr = String.format("Приказ + \\#\"" + order +"\"  выполнен на " + progress + "\\%");
+        System.out.println(formattedStr);
     }
 }
