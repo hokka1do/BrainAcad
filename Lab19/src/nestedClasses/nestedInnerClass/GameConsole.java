@@ -19,16 +19,14 @@ public class GameConsole {
         private final String brand;
         private final int connectedNumber;
         private String consoleSerial = serial;
-        private final int connectedNumber1 = 1;
-        private final int connectedNumber2 = 2;
-        private String color;
-        private double chargeLevel = 100.0;
+        String color;
+        double chargeLevel = 100.0;
 
         public Gamepad(String brand, int connectedNumber) {
             this.brand = brand;
             this.connectedNumber = connectedNumber;
-            Gamepad gamepad1 = new Gamepad((String) firstGamepad, connectedNumber1);
-            Gamepad gamepad2 = new Gamepad((String) secondGamepad, connectedNumber2);
+            Gamepad gamepad1 = new Gamepad((String) firstGamepad, 1);
+            Gamepad gamepad2 = new Gamepad((String) secondGamepad, 2);
         }
 
         public String getBrand() {
@@ -43,14 +41,6 @@ public class GameConsole {
             return consoleSerial;
         }
 
-        public int getConnectedNumber1() {
-            return connectedNumber1;
-        }
-
-        public int getConnectedNumber2() {
-            return connectedNumber2;
-        }
-
         public String getColor() {
             return color;
         }
@@ -58,6 +48,15 @@ public class GameConsole {
         public double getChargeLevel() {
             return chargeLevel;
         }
+
+        public void setColor(String color) {
+            this.color = color;
+        }
+
+        public void setChargeLevel(double chargeLevel) {
+            this.chargeLevel = chargeLevel;
+        }
+
     }
 
     public String getBrand() {

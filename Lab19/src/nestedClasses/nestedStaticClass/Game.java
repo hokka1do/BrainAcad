@@ -1,16 +1,19 @@
 package nestedClasses.nestedStaticClass;
 
 public class Game {
-    private final String name = "COD";
-    private final GENRE genre = GENRE.ACTION;
-    private final TYPE type = TYPE.VIRTUAL;
+    final String name;
+    final GENRE genre;
+    final TYPE type;
 
     public enum TYPE {
         VIRTUAL,
         PHYSICAL
     }
 
-    private Game(String name, GENRE genre, TYPE type) {
+    public Game(String name, GENRE genre, TYPE type) {
+        this.name = name;
+        this.genre = genre;
+        this.type = type;
     }
 
     public String getName() {
@@ -25,13 +28,50 @@ public class Game {
         return type;
     }
 
-    private static class GameDisk {
+    public static class GameDisk {
         private final String description;
         private final Game data;
 
-        public GameDisk(String description, Game data) {
+        private GameDisk(String name, GENRE genre, String description) {
             this.description = description;
-            this.data = data;
+            this.data = new Game(name, genre, TYPE.PHYSICAL);
         }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public Game getData() {
+            return data;
+        }
+    }
+
+    public static class VirtualGame {
+        private int rating;
+        private final Game data;
+
+        private VirtualGame(String name, GENRE genre) {
+            this.data = new Game(name, genre, TYPE.VIRTUAL);
+        }
+
+        public int getRating() {
+            return rating;
+        }
+
+        public void setRating(int rating) {
+            this.rating = rating;
+        }
+
+        public Game getData() {
+            return data;
+        }
+    }
+
+    public static GameDisk getGameDisk(String name, GENRE genre, String description) {
+        return new GameDisk(name, genre, description);
+    }
+
+    public static VirtualGame getVirtualGame(String name, GENRE genre) {
+        return new VirtualGame(name, genre);
     }
 }
