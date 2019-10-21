@@ -90,5 +90,11 @@ public class GameConsole {
     public void setOn(boolean on) {
         isOn = on;
     }
+
+    public static interface Powered {
+        public static void powerOn() {
+
+        }
+    }
 }
 

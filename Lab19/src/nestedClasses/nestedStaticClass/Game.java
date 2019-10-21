@@ -5,6 +5,13 @@ public class Game {
     final GENRE genre;
     final TYPE type;
 
+    public enum GENRE {
+        ACTION,
+        SPORT,
+        RACE,
+        STRATEGY
+    }
+
     public enum TYPE {
         VIRTUAL,
         PHYSICAL
@@ -31,6 +38,7 @@ public class Game {
     public static class GameDisk {
         private final String description;
         private final Game data;
+        GENRE genre;
 
         private GameDisk(String name, GENRE genre, String description) {
             this.description = description;
@@ -43,6 +51,10 @@ public class Game {
 
         public Game getData() {
             return data;
+        }
+
+        public GENRE getGenre() {
+            return genre;
         }
     }
 
