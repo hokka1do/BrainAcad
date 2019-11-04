@@ -6,7 +6,8 @@ import java.lang.reflect.Type;
  * Created by Brainacad4 on 14.10.2019.
  */
 public class XmlData extends AbstractData implements Storable<XmlData> {
-    TYPE type =TYPE.XML;
+    TYPE type = TYPE.XML;
+
     public XmlData(long id) {
         super(id);
     }
@@ -28,6 +29,6 @@ public class XmlData extends AbstractData implements Storable<XmlData> {
 
     @Override
     public Type getType() {
-        return null;
+        return type.getClass();
     }
 }

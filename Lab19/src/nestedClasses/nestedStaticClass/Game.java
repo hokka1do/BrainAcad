@@ -7,8 +7,8 @@ public class Game {
 
     public enum GENRE {
         ACTION,
-        SPORT,
         RACE,
+        SPORT,
         STRATEGY
     }
 
@@ -71,6 +71,7 @@ public class Game {
         }
 
         public void setRating(int rating) {
+            if (rating < 0 || rating > 5) return;
             this.rating = rating;
         }
 

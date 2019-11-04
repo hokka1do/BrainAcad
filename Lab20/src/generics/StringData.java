@@ -9,12 +9,33 @@ public class StringData extends AbstractData {
     private Type type;
     private String data;
 
-    public <T extends AbstractData & Storable> StringData(long id, Type type, T data) {
+    public <T extends AbstractData> StringData(long id, Type type, T data) {
         super(id);
+        this.type = type;
+        this.data = data.convertToString();
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     @Override
     String convertToString() {
-        return null;
+        return "StringData{" +
+                "type=" + type +
+                ", data='" + data + '\'' +
+                '}';
     }
 }

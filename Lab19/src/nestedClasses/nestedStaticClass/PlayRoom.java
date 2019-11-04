@@ -19,17 +19,19 @@ public class PlayRoom {
         virtualGames.add(Game.getVirtualGame("NBA", Game.GENRE.SPORT));
         virtualGames.add(Game.getVirtualGame("Red alert 2", Game.GENRE.STRATEGY));
         virtualGames.add(Game.getVirtualGame("XZ", Game.GENRE.RACE));
+        virtualGames.get(0).setRating(3);
+        virtualGames.get(1).setRating(2);
+        virtualGames.get(2).setRating(5);
+        virtualGames.get(3).setRating(4);
         GameConsole gameConsole = new GameConsole("SONY", "DW12SSr23");
         gameConsole.setOn(true);
-        Collections.sort(gameDisks, new Comparator<Game.GameDisk>() {
-            @Override
-            public int compare(Game.GameDisk o1, Game.GameDisk o2) {
-                return o1.genre.compareTo(o2.genre);
-            }
-        });
+        Collections.sort(gameDisks, Comparator.comparing(o -> o.getData().getGenre()));
         for (Game.GameDisk games : gameDisks) {
-            System.out.println(games);
+            System.out.println(games.getData().name + " - Genre is : " +games.getData().getGenre());
         }
-
+        Collections.sort(virtualGames, Comparator.comparing(Game.VirtualGame::getRating));
+        for (Game.VirtualGame games : virtualGames) {
+            System.out.println(games.getData().name + " - rating is : " +games.getRating());
+        }
     }
 }

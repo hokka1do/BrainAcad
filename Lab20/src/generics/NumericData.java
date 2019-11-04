@@ -16,7 +16,18 @@ public class NumericData extends AbstractData implements Storable<NumericData> {
 
     @Override
     String convertToString() {
-        return null;
+        return "NumericData{" +
+                "type=" + type +
+                ", data=" + data +
+                '}';
+    }
+
+    @Override
+    public String toString() {
+        return "NumericData{" +
+                "type=" + type +
+                ", data=" + data +
+                '}';
     }
 
     @Override
@@ -26,11 +37,10 @@ public class NumericData extends AbstractData implements Storable<NumericData> {
 
     @Override
     public void write(NumericData data) {
-
     }
 
     @Override
     public Type getType() {
-        return null;
+        return type.getClass();
     }
 }
