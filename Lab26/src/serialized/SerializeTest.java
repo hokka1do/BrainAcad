@@ -4,7 +4,8 @@ import java.io.*;
 
 public class SerializeTest {
     public static void main(String[] args) {
-        CreditCard creditCard = new CreditCard(CreditCard.CARD_TYPE.MASTERCARD, "WELLS FARGO", 888855135, 1112, 718);
+        CreditCard creditCard = new CreditCard(CreditCard.CARD_TYPE.MASTERCARD, "WELLS FARGO",
+                888855135, 1112, 718);
         try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("creditCards.ser"))) {
             objectOutputStream.writeObject(creditCard);
         } catch (IOException e) {

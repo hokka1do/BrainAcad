@@ -4,22 +4,24 @@ import java.io.File;
 
 public class DirectoryFilesPrinter {
     public static void main(String[] args) {
-        File file = new File("C:\\Users\\АСФА\\IdeaProjects\\BrainAcad");
+        File file = new File(new File("./").getAbsolutePath());
+        for (String i : file.list()) {
+            System.out.println(i);
+        }
+        printName(file);
     }
 
-    public void printName(File file) {
+    private static void printName(File file) {
         try {
-            if (!file.isDirectory() && !file.isFile()) {
-
+            if (!file.exists()) {
+                System.out.println("«Каталог не существует или пуст»");
             }
             File[] files = file.listFiles();
             for (File f : files) {
                 System.out.println(f.getName());
             }
-        } catch (NullPointerException e) {
-            System.out.println("«Каталог не существует или пуст»");
+        } catch (NullPointerException ignored) {
         }
-
     }
 }
 /*

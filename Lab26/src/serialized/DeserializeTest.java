@@ -8,7 +8,8 @@ public class DeserializeTest {
     public static void main(String[] args) {
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("creditCards.ser"))) {
             CreditCard creditCard_2 = (CreditCard) objectInputStream.readObject();
-            System.out.printf("CARD_TYPE : %s \t Name of the bank: %s \n, Card Number is : %d \n ", creditCard_2.getCard_type().toString(), creditCard_2.getBankName(), creditCard_2.getCardNumber());
+            System.out.printf("CARD_TYPE : %s \t Name of the bank: %s \n, Card Number is : %d \n ",
+                    creditCard_2.getCard_type().toString(), creditCard_2.getBankName(), creditCard_2.getCardNumber());
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
@@ -16,7 +17,7 @@ public class DeserializeTest {
 }
 /*
 2.Десериализация из файла
-•Создать класс DeserializeTest с методом main
+•Создать класс Deserialize load main class serialized.DeserializeTestTest с методом main
 •Создать блок try-with-resource
 •СоздатьObjectInputStream
 •Проинициализировать ObjectInputStream с параметром FileInputStream
