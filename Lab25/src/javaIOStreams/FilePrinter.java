@@ -4,15 +4,16 @@ import java.io.*;
 
 public class FilePrinter {
     public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File("C:\\Users\\АСФА\\IdeaProjects\\BrainAcad\\Lab25\\src\\javaIOStreams")))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("D:\\e.txt")))) {
             String firstLine = reader.readLine();
-            while (firstLine != null) {
+            while (firstLine != null && !firstLine.isEmpty()) {
                 System.out.println(firstLine);
                 firstLine = reader.readLine();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }
 /**

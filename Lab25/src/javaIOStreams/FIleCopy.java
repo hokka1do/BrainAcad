@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class FIleCopy {
     public static void main(String[] args) {
-        try (FileInputStream fis = new FileInputStream("C://SomeDir//Hello.txt");
-             FileOutputStream fos = new FileOutputStream("C://SomeDir//Hello2.txt")) {
+        try (FileInputStream fis = new FileInputStream("D://e.txt");
+             FileOutputStream fos = new FileOutputStream("D://e2.txt")) {
             int i = -1;
             while (!(fis.read() == -1)) {
                 fos.write((char) i);
