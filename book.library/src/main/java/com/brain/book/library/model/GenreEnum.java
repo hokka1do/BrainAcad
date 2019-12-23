@@ -9,8 +9,6 @@ public enum GenreEnum {
     FANTAZY,
     DETECTIVE;
 
-    @Column(name = "genre", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private GenreEnum genre;
+
 }
 

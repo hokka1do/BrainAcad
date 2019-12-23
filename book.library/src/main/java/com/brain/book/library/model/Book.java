@@ -26,4 +26,7 @@ public class Book implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "author_id", nullable = false)
     private Author author;
+    @Column(name = "genre", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private GenreEnum genre;
 }
