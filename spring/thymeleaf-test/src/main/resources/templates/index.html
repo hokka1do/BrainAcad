@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Employees</title>
+</head>
+<body>
+  <div>
+    <div>
+      <h2 th:if="${employees eq null or employees.empty}">No employees yet!</h2>
+      <div th:if="${employees ne null}">
+        <h2>employees</h2>
+        <table>
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Creation Date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="item : ${employees}">
+            <td th:text="${item.name}"></td>
+            <td th:text="${item.phone}"></td>
+            <td><a th:href="@{/edit/{id}(id=${item.id})}">Edit</a></td>
+            <td><a th:href="@{/delete/{id}(id=${item.id})}">Delete</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><a href="/new">Add</a></p>
+    </div>
+  </div>
+</body>
+</html>
